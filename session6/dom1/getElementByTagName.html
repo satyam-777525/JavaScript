@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="1">i am the singer</h1>
+    <div>
+        <h1 id="2">i am the dancer </h1>
+    </div>
+    <div>
+        <div>
+            <h1 id="3">i am the king </h1>
+        </div>
+    </div>
+
+    <button onclick="changeh1()">click me</button>
+
+    <script>
+        var ele=document.getElementsByTagName("h1");
+        function changeh1(){
+            console.log(ele)
+
+            ele[0].style.backgroundColor="red"
+            ele[1].style.backgroundColor="green"
+            ele[2].style.backgroundColor="blue"
+        }
+    </script>
+</body>
+</html>

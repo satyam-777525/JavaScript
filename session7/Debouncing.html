@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="input" placeholder="Search">
+<div id="output"></div>
+
+<script>
+    let timer;
+
+    const input = document.getElementById("input");
+    const output = document.getElementById("output");
+
+    input.addEventListener("input", () => {
+
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            output.innerText = input.value;
+        }, 1000);
+
+    });
+</script>
+
+
+</body>
+</html>

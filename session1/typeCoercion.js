@@ -1,0 +1,6 @@
+console.log(40-"5") 
+console.log(40+"5"+"255")
+console.log(40+"5")
+console.log(50-"5")
+console.log(50+"5")
+console.log(50*"5"+5)

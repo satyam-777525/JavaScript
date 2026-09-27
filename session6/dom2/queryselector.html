@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="id">DOM</h1>
+    <p class="para">good Morning</p>
+    <h2 class="head">Satyam</h2>
+    <div class="container">
+        <h1 class="content"></h1>
+        <div id="main">
+            <h1 class="content"> hello ji </h1>
+        </div>
+    </div>
+    <button onclick="clickself()">click me</button>
+
+    <script>
+        var ele=document.querySelector(".content") // only select the first value 
+        var ele1=document.querySelectorAll(".content")
+        function clickself(){
+            console.log(ele);
+            console.log(ele1)
+            console.log(ele1[0])
+            console.log(ele1[1])
+        }
+    </script>
+</body>
+</html>

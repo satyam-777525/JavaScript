@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+  <li>Home</li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+<!-- Event delegation is a technique in JavaScript where you add a single event listener to a parent element instead of adding event listeners to multiple child elements individually. -->
+
+<script>
+  document.getElementById("menu").addEventListener("click", function(event) {
+    // check if clicked element is <li>
+    if (event.target.tagName === "LI") {
+      alert(event.target.textContent);
+    }
+  });
+</script>
+
+    
+</body>
+</html>

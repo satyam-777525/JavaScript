@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="main" id="heading">Document object Model</h1>
+    <button onclick="clickthe()">click me</button>
+
+    <script>
+        var ele=document.getElementById("heading")
+
+        function clickthe(){
+            console.log(ele.getAttribute("class")) // gives the id name
+            ele.setAttribute("title","hello")// set the new attribute like style,class,name
+            ele.setAttribute("style","background-color:blue")
+            console.log(ele.getAttribute("title"))
+            ele.removeAttribute("title")// remove the title attribute
+            console.log(ele.getAttribute("title"))
+
+        }
+    </script>
+    
+</body>
+</html>

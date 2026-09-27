@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gparent{
+            background-color: yellow;
+            width: 400px;
+            height: 400px;
+        }
+        #parent{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        #child{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gparent">
+        <div id="parent">
+            <div id="child" ></div>
+        </div>
+    </div>
+<!-- When an event (like click) happens on an element, it first runs the event handlers on that element,
+then moves up (bubbles) through its ancestors (parent → grandparent → … → document). -->
+<!-- Bubbling = child → parent (default).use true of capturing
+Capturing = parent → child (only if you enable it). -->
+<!-- 
+event.stopPropagation() → stops bubbling (or capturing).
+event.stopImmediatePropagation() → stops other listeners on the same element too. -->
+<!-- // bubbling = child → parent → gparent
+// capturing = gparent → parent → child -->
+    <script>
+        const gparent=document.getElementById("gparent");
+        const parent=document.getElementById("parent");
+        const child=document.getElementById("child");
+
+        gparent.addEventListener("click",function(){
+            console.log("gparent call")
+        })
+        parent.addEventListener("click",function(){
+            console.log("parent call")
+        } )
+        child.addEventListener("click",(event)=>{
+            console.log("child call")
+           // event.stopPropagation()
+        })
+
+    </script>
+    
+</body>
+</html>

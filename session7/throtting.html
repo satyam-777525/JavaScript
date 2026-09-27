@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Click Me</button>
+<div id="output"></div>
+
+<script>
+    let lastCall = 0;
+
+    const btn = document.getElementById("btn");
+    const output = document.getElementById("output");
+
+    btn.addEventListener("click", () => {
+
+        const now = Date.now();
+
+        if(now-lastCall>=1000){
+            output.innerText="Function executed!";
+            lastCall=now;
+        }
+
+    });
+</script>
+
+</body>
+</html>

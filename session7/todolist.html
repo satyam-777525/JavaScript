@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label for="input">Enter the task:</label>
+        <input id="input"  placeholder="enter task" type="text" >
+        <button onclick="fun(event)">add task</button>
+        <ul id="list">
+
+        </ul>
+    </form>
+
+    <script>
+        const list=document.getElementById("list")
+        function fun(event){
+            event.preventDefault()
+            console.log(event.type)
+            const input=document.getElementById("input")
+            const value = input.value.trim();
+            const button=document.createElement("button")
+            const li=document.createElement("li")
+            li.textContent=value;
+            button.textContent="remove"
+            button.onclick=()=>li.remove()
+            list.appendChild(li)
+            li.appendChild(button)
+
+
+        }
+    </script>
+    
+</body>
+</html>

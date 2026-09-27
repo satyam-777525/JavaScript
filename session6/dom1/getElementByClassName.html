@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="info">the novel man </h1>
+    <h1 class="info">satyam</h1>
+    <h1 class="info">varshney</h1>
+
+    <button onclick="changetext()">click me</button>
+
+    <script>
+        var ele=document.getElementsByClassName("info"); // gets all the elements with class name info and returns an array of elements
+        
+        function changetext(){
+            console.log(ele); // gives the error
+            ele[0].style.backgroundColor="red"
+            ele[1].style.backgroundColor="green"
+            ele[2].style.backgroundColor="blue"
+        }
+    </script>
+
+
+</body>
+</html>

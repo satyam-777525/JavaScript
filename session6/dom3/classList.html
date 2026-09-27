@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main head" id="heading">Document Object Model</h1>
+    <button onclick="green()">Green</button>
+    <button>Blue</button>
+    <button>Red</button>
+    <button>Pink</button>
+    <button onclick="yellow()">Toggle</button>
+
+    <script>
+        var ele=document.getElementById("heading")
+
+        function green(){
+            // console.log(ele.classList) gives all the id like [main,head]
+            ele.classList.add("Green")
+            // console.log(ele.classList) add the green in list
+            ele.classList.remove("head")
+            console.log(ele.classList) 
+
+        }
+
+        function yellow(){
+            console.log(ele.classList)
+            ele.classList.toggle("yellow") // h to remmove kr dega nhi to add kr dega 
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
